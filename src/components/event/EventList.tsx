@@ -7,7 +7,7 @@ import List from "@/components/common/List";
 const EventList = ({
   dataList,
   idList,
-  onClick = () => null,
+  onClick,
   sortFlag = false,
   type = "all",
 }) => {
