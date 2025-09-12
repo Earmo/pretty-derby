@@ -5,7 +5,7 @@ import EventDetail from "./EventDetail";
 import List from "@/components/common/List";
 
 const EventList = ({
-  dataList = [],
+  dataList,
   idList,
   onClick = () => null,
   sortFlag = false,
