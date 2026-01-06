@@ -1,5 +1,12 @@
-const EventCard = (props) => {
-  const { data, onClick, className } = props;
+const EventCard = ({
+  data,
+  onClick,
+  className,
+}: {
+  data: GameEvent;
+  onClick?: () => void;
+  className?: string;
+}) => {
   return data ? (
     <div
       className={`border border-solid border-gray-700 px-2 rounded truncate cursor-pointer ${className}`}

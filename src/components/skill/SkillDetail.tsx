@@ -31,10 +31,10 @@ const SkillDetail = ({
   const supportList = db.chain
     .get("supports")
     .filter((support) => {
-      let flag = 0;
+      let flag = false;
       support.skillList.forEach((id) => {
         if (id === fullData?.id) {
-          flag = 1;
+          flag = true;
         }
       });
       return flag;
@@ -45,15 +45,15 @@ const SkillDetail = ({
   const playerList = db.chain
     .get("players")
     .filter((player) => {
-      let flag = 0;
+      let flag = false;
       player.skillList.forEach((id) => {
         if (id === fullData?.id) {
-          flag = 1;
+          flag = true;
         }
       });
       return flag;
     })
-    .sort((a, b) => b.rarity - a.rarity)
+    .sort((a, b) => Number(b.rare) - Number(a.rare))
     .value();
 
   if (!fullData) return null;

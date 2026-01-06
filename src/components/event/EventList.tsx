@@ -10,22 +10,31 @@ const EventList = ({
   onClick,
   sortFlag = false,
   type = "all",
+}: {
+  dataList?: EventList;
+  idList?: string[];
+  onClick?: (event: GameEvent) => void;
+  sortFlag?: boolean;
+  type?: "multi" | "all";
 }) => {
   const sort = sortFlag
     ? {
         data: [
-          { title: "切れ者", func: (data) => JSON.stringify(data)?.indexOf("切れ者") !== -1 },
-          { title: "有选项", func: (data) => data?.choiceList.length > 1 },
-          { title: "无选项", func: (data) => data?.choiceList.length <= 1 },
+          {
+            title: "切れ者",
+            func: (data: GameEvent) => JSON.stringify(data)?.indexOf("切れ者") !== -1,
+          },
+          { title: "有选项", func: (data: GameEvent) => data?.choiceList.length > 1 },
+          { title: "无选项", func: (data: GameEvent) => data?.choiceList.length <= 1 },
         ],
       }
-    : null;
+    : undefined;
   const filterFunc =
     type === "multi"
-      ? (data) => {
+      ? (data: GameEvent) => {
           return data?.choiceList.length > 1;
         }
-      : null;
+      : undefined;
   return (
     <List
       listKey="events"
@@ -33,7 +42,6 @@ const EventList = ({
       idList={idList}
       sort={sort}
       filterFunc={filterFunc}
-      onClick={onClick}
       className=""
       itemRender={(item, setCur) => (
         <EventCard
@@ -42,7 +50,7 @@ const EventList = ({
           onClick={() => (onClick ? onClick(item) : setCur(item))}
         />
       )}
-      detailRender={(item) => <EventDetail data={item} isNur={false} />}
+      detailRender={(item) => item && <EventDetail data={item} />}
     />
   );
 };

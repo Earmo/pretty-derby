@@ -1,5 +1,4 @@
 import { Low, Memory } from "lowdb";
-import { JSONFile } from "lowdb/node"; // If you need file storage later
 import { useState, useEffect } from "react";
 import lodash from "lodash";
 
@@ -7,8 +6,8 @@ import lodash from "lodash";
 export type Schema = {
   players: PlayerList;
   supports: SupportCardList;
-  skills: SkillList[];
-  events: any[];
+  skills: SkillList;
+  events: EventList;
   updateTime: string;
   races: any[];
   buffs: any[];

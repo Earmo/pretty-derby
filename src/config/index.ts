@@ -68,7 +68,12 @@ const PLAYER_ADAPT_TITLES = {
   根性: "gutsGrow",
   賢さ: "wisdomGrow",
 };
-const SKILL_TYPES = {
+
+interface SkillTypes {
+  [key: number]: string;
+}
+
+const SKILL_TYPES: SkillTypes = {
   1: "速度属性",
   2: "耐力属性",
   3: "力量属性",
@@ -244,5 +249,5 @@ export {
   RACE_FILTER_LIST,
   SEED_BLUE_LABELS,
   SEED_RED_LABELS,
-  IMAGE_FALLBACK
+  IMAGE_FALLBACK,
 };

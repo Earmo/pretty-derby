@@ -1,6 +1,6 @@
 import SkillList from "@/components/skill/SkillList";
 import { useTranslation } from "react-i18next";
-const EventDetail = ({ data }) => {
+const EventDetail = ({ data }: { data: GameEvent }) => {
   const { t } = useTranslation();
   return data ? (
     <>
@@ -8,7 +8,7 @@ const EventDetail = ({ data }) => {
       <div className="font-semibold mb-1">{t(data.name)}</div>
       {data.choiceList.map((choice, index) => (
         <div
-          key={choice}
+          key={choice[0]}
           className={`w-full flex py-2 ${index % 2 === 0 ? "bg-white" : "bg-gray-100"}`}
         >
           <div className="w-1/3 mr-4">
