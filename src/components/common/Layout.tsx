@@ -111,7 +111,12 @@ const Layout = ({ children }: { children: ReactElement }) => {
           width="160px"
           height="30px"
         ></iframe>
-
+        <a
+          href="https://sts2.urarawin.com"
+          target="_blank"
+          rel="noreferrer"
+          className="underline"
+        >杀戮尖塔2</a>
         <a
           target="_blank"
           rel="noreferrer"
