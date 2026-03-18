@@ -1,0 +1,21 @@
+Open-source license scope
+
+The MIT license in this repository applies only to the original source code
+and other original project files created for this repository, unless a file
+explicitly states otherwise.
+
+Excluded from the MIT license
+
+The following content is not licensed under MIT, even if it appears in this
+repository:
+
+- Game materials and copyrighted content
+- Character, card, support, skill, item, or race related data and text
+- Images, icons, screenshots, logos, and other visual assets
+- Names, titles, terminology, and localized text originating from the game
+- Any other third-party content owned by the relevant rights holders
+
+These materials remain the property of their respective copyright or trademark
+owners. Their inclusion in this repository does not grant permission to use,
+redistribute, modify, or commercialize them beyond what is allowed by the
+applicable rights holders or by law.
