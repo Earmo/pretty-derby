@@ -1,0 +1,1 @@
+import{am as s,j as e}from"./index-D4Wnv7E_.js";import{k as o}from"./PlayerList-C3hBgMqg.js";import"./Helmet-B1yGN9sq.js";const n=()=>{const{id:t,nur:a}=s(),r=!!parseInt(a||"0");return e.jsx(o,{id:t,isNur:r,page:!0})};export{n as default};
